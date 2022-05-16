@@ -15,7 +15,8 @@ def count_vowels(word):
 
 def test_challenge_01_happy_case(): 
      assert count_vowels('Kaleidoscope') == 6   
-     # test needs to start with test_; afterwards new name can be given
+     # test needs to start with test_; afterwards new test-name can be given
+    # each test-name must be unique
      #we can change the word Kaleidoscope by any other word
 
 # add test cases
