@@ -21,7 +21,11 @@ def test_challenge_01_happy_case():
 
 def test_challenge_02_happy_case(): 
      assert count_vowels('Kundalini') == 4   
-     # other number of vowels --> passed
+     # other number of vowels -p-> passed
+
+def test_upper_vowel_case():
+    assert count_vowels('AEIOU') == 0
+     # --> passed
  
 def test_challenge_Y_case(): 
      assert count_vowels('Yak') == 1   

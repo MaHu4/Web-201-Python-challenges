@@ -6,14 +6,16 @@
 # it should return "112233aa!!".
 
 
-# # Solution 1: with for loop (by looping through each character and appending it to a list, which is then joined and returned at the end):
-# def duplicate_characters(string):
-#      double = []
-#      for i in string:
-#           double.append(i+""+i)
-#      print(double)
-#      return "".join(double)
+# Solution 1: with for loop (by looping through each character and appending it to a list, which is then joined and returned at the end):
+def duplicate_characters(string):
+     double = [] 
+     for i in string:
+          double.append(i+""+i) # "" no space because there is no space; i+i would do mathematical calculation for numbers by giving the sum
+     # print(double) # prints a string in the terminal; not a word
+     # return print("".join(double))  # to print in the terminal
+     return "".join(double)
 
+duplicate_characters("today") # to print in the terminal
 
 #Solution 2: with for-loop
 # def duplicate_characters (string):
@@ -46,25 +48,28 @@
 #Solution 5: integrated for-loop 3
 
 def duplicate_characters (string):
+     
     return ''.join([a+a for a in string])
+
+duplicate_characters ('NOW!')
 
 # Tests:
 
-def test_challenge_02_case_1(): 
-     assert duplicate_characters('now') == 'nnooww'
-     # --> passed
+# def test_challenge_02_case_1(): 
+#      assert duplicate_characters('now') == 'nnooww'
+#      # --> passed
 
-def test_challenge_02_case_2(): 
-     assert duplicate_characters('123a!') == '112233aa!!'
-     # --> passed
+# def test_challenge_02_case_2(): 
+#      assert duplicate_characters('123a!') == '112233aa!!'
+#      # --> passed
 
-def test_camelCase_case():
-     assert duplicate_characters('Iam') == 'IIaamm' 
-     # --> passed
+# def test_camelCase_case():
+#      assert duplicate_characters('Iam') == 'IIaamm' 
+#      # --> passed
 
-def test_space_case():
-     assert duplicate_characters('I am') == 'II  aamm' 
-     # --> passed
+# def test_space_case():
+#      assert duplicate_characters('I am') == 'II  aamm' 
+#      # --> passed
 
  # Source for solutions 1,3,4 see: https://ao.ms/how-to-double-characters-in-python/, 
  # Source for solutiona 2,5, see: https://stackoverflow.com/questions/23545855/character-repeating-in-a-string
