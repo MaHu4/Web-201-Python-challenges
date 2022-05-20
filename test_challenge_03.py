@@ -15,13 +15,6 @@
 # Notes: Consider a month has 30 days.
 
 
- 
- 
-months = int(input())
-
-days_per_month = 30
-
-
 def wash_hands(n, m):
     # n = numbrt of washes
     # m = number of months
@@ -35,5 +28,26 @@ def wash_hands(n, m):
     return(str(minutes) + " minutes and " + str(seconds) + " seconds") 
 
 
+
+# Solution Theresa
+
+# def wash_hands(n, m):
+#     # n = number of washes
+#     # m = number of months
+#     oneTime = 21
+#     oneDayTotalSeconds = oneTime * n
+#     totalWashes = oneDayTotalSeconds  30  m
+#     minutes = int(totalWashes // 60) 
+#     seconds = int(totalWashes % 60)
+
+#     return(str(minutes) + " minutes and " + str(seconds) + " seconds")
+
+
 def test_challenge_03_case_1(): 
     assert wash_hands(8, 7) == '588 minutes and 0 seconds'
+
+def test_challenge_03_case_2():
+    assert wash_hands(0, 0) == "0 minutes and 0 seconds"
+
+def test_challenge_03_case_3():
+  assert wash_hands(7, 9) == "661 minutes and 30 seconds"
