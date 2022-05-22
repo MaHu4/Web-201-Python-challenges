@@ -5,5 +5,7 @@
 def sum_of_squares(array_of_numbers):
     pass
 
+# for loop
+
 def test_challenge_06_happy_case(): 
-     assert sum_of_squares([1,2,3,4]) == 30
+     assert sum_of_squares([1,2,3,4]) == 30 #(1*1)+(2*2)+(3*4)+(4*4)

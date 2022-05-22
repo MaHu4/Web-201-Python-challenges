@@ -5,11 +5,16 @@
 # Write a function that takes an variable and returns 
 # True or False if the variable is a palindrome.
 
-def is_palindrome(var):
-    pass
+# def is_palindrome(var):
+#     reverse = var.reverse()
 
-def test_challenge_04_palindrome_number():
-    assert is_palindrome(545) == True
+str = ["today"]
+str.reverse()
+print(str.reverse())
 
-def test_challenge_04_palindrome_string():
-    assert is_palindrome('MADAM') == True    
+
+# def test_challenge_04_palindrome_number():
+#     assert is_palindrome(545) == True
+
+# def test_challenge_04_palindrome_string():
+#     assert is_palindrome('MADAM') == True    

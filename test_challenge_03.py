@@ -14,6 +14,7 @@
 # 
 # Notes: Consider a month has 30 days.
 
+# My solution 1: 
 
 def wash_hands(n, m):
     # n = numbrt of washes
@@ -23,10 +24,14 @@ def wash_hands(n, m):
     secondsPerMonth = secondsPerDay * 30  #total seconds of washing hands per month = (n * 21) * 30
     secondsTotalMonth = secondsPerMonth * m  # total seconds of washing hands for total number of months = (n * 21) * 30 * m 
     minutes = secondsTotalMonth // 60   # // converts total seconds into entire minutes =  ((n * 21) * 30 * m) / 60  ( one / is division, gives a float/digital number)
-    seconds = secondsTotalMonth % 60 #takes the division and takes the remainder
+    seconds = secondsTotalMonth % 60 # divides by the integers possible and and takes the remainder
 
     return(str(minutes) + " minutes and " + str(seconds) + " seconds") 
 
+# My short solution:
+
+def wash_hands(n, m):
+    return (str((((n * 21) * 30 * m) // 60)) + " minutes and " + str((((n * 21) * 30 * m) % 60)) + " seconds")
 
 
 # Solution Theresa

@@ -3,7 +3,8 @@
 # extension: apply discount accordingly:
 # if total is greater than 50 Euros 5% discount.
 # if total is greater than 60 Euros 6% discount.
-# if total is greater than 70 Euros 7% discount and so on.
+# if total is greater than 70 Euros 7% discount and so on. 
+# --> for each 10€ = 1% discount starting from 50€
 
 def calculate_bill(shopping_list):
     pass
