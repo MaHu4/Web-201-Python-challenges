@@ -19,31 +19,21 @@
 
 # Method 2: boolean using the inbuilt function to reverse a string
 
-# def is_palindrome(var):
-#     var = str("")
-#     rev = ''.join(reversed(var))
-
-#     if (var == rev):
-#         return True
-#     else:
-#         return False
- 
-#Method 3: 
-
 def is_palindrome(var):
-    var = str("")
-    rev = ''.join(reversed(var))
+    # var = str("") # produces blank strings; it overrides a variable which shoul dbe avoided
+    str_var = str(var)
+    rev = ''.join(reversed(str_var))
 
-    if (var == rev):
+    if (str_var == rev):
         return True
     else:
         return False
 
-#Method 4: for loop
+#Method 4: for loop ??
      
 
 def test_challenge_04_palindrome_number():
-    assert is_palindrome(545) == True # passed
+    assert is_palindrome(545) == True #  passed
 
 def test_challenge_04_palindrome_string():
     assert is_palindrome('MADAM') == True # passed
@@ -58,6 +48,6 @@ def test_challenge_04_palindrome_string4 ():
     assert is_palindrome('MaddaM') == True  # passed
 
 def test_challenge_04_no_palindrome_string():
-    assert is_palindrome('HELLO') == False  # Didn't pass!!!
+    assert is_palindrome('HELLO') == False  # pass
 
 # source of inspiration for Method 1 + 2: https://www.geeksforgeeks.org/python-program-check-string-palindrome-not/
