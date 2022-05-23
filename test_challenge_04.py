@@ -11,25 +11,23 @@
 
 # Method 1: 
 
-# def is_palindrome(var):
-#     var = str("") # makes all var a string --> returns also integers into string  
-#     return var == var[::-1]  # slice operation object_name[start_index : stop_index : step] -->  var[::-1] --> the object is going to slice every "step" index from the given start index, till the stop index (excluding the stop index) and returns it
+def is_palindrome(var):
+    var = str(var) # makes all var a string --> returns also integers into string  
+    return var == var[::-1]  # slice operation object_name[start_index : stop_index : step] -->  var[::-1] --> the object is going to slice every "step" index from the given start index, till the stop index (excluding the stop index) and returns it
     
 
 
 # Method 2: boolean using the inbuilt function to reverse a string
 
-def is_palindrome(var):
-    # var = str("") # produces blank strings; it overrides a variable which shoul dbe avoided
-    str_var = str(var)
-    rev = ''.join(reversed(str_var))
+# def is_palindrome(var):
+#     # var = str("") # error: produces blank strings; it overrides a variable which shoul dbe avoided
+#     str_var = str(var)
+#     rev = ''.join(reversed(str_var))
 
-    if (str_var == rev):
-        return True
-    else:
-        return False
-
-#Method 4: for loop ??
+#     if (str_var == rev):
+#         return True
+#     else:
+#         return False
      
 
 def test_challenge_04_palindrome_number():

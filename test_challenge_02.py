@@ -53,6 +53,9 @@ def duplicate_characters (string):
 
 duplicate_characters ('NOW!')
 
+
+ 
+
 # Tests:
 
 # def test_challenge_02_case_1(): 
