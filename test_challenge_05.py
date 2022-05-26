@@ -10,9 +10,9 @@ from typing import Iterable
 def extract_integers(mixed_list):
     integer_list = [] #empty list
     if isinstance(mixed_list, Iterable):
-     for i in (mixed_list): # goes one by one through the list; in for-loops, variable in () must be interable
+     for i in (mixed_list): # goes one by one through the list; in for-loops, variable in () must be iterable
         print(i)
-        if isinstance(i, int): # ifinstance(what do I evaluate, type to be checked)
+        if isinstance(i, int): # ifinstance --> i = to be evaluate, int = type to be checked, here an integerx
              integer_list.append(i) # ask the integer_list to do an append, i.e. add an element to a list; in this case i = integer
     return integer_list 
 
@@ -29,5 +29,5 @@ def test_challenge_05_emptyList():
 def test_challenge_05_noInteger(): 
      assert extract_integers(['apple', 'banana']) == []  
 
-def test_challenge_05_Flot_case(): 
+def test_challenge_05_Float_case(): 
      assert extract_integers([1.5, 'apple', 2, 'banana',3, 4]) == [2,3,4]      
