@@ -25,8 +25,8 @@ def sum_of_squares(array_of_numbers):
     for i in array_of_numbers:
 
         if isinstance(i, int) or isinstance(i, float):
-            Sum = sum(i ** 2)   #takes the sum of the square square of all numbers
-        if not isinstance(i, int) or not isinstance(i,float):
+            Sum = sum([i ** 2], 0)   #takes the sum of the square square of all numbers
+        else:
             return("Not a number")
 
     return (Sum)
