@@ -9,27 +9,30 @@
 #     if not isinstance(array_of_numbers, list):
 #         return "Not a list"
 
-#     sum = 0
+#     sum = 0 # variable to store the sum later, initializing it with 0
 #     for i in array_of_numbers:
 #         if isinstance(i, int):
 #             sum = (i * i) + sum
+#             #(1+1)+0 --> sum = 1 --> (2*2)+1 --> sum =5
 #         if not isinstance(i, int):
 #             return("No integer")
 #     return (sum)
 
+#Solution with List
 def sum_of_squares(array_of_numbers):
-   
-    if not isinstance(array_of_numbers, list): # there are no arrays in phyton; lists are used instead
+    
+     if not isinstance(array_of_numbers, list): # there are no arrays in phyton; lists are used instead
         return "Not a list"
     
-    for i in array_of_numbers:
+     list_of_multiplications = [] #sum-function in line 34 needs a list; here we create a variable with an empty list; important to be outside the for-loop
 
-        if isinstance(i, int) or isinstance(i, float):
-            Sum = sum([i ** 2], 0)   #takes the sum of the square square of all numbers
-        else:
-            return("Not a number")
-
-    return (Sum)
+     for i in array_of_numbers:
+          if isinstance(i, int) or isinstance(i, float):
+           list_of_multiplications.append(i**2) # adds the single squared elements in a list by means of append; (i*i) works as well
+          else:
+               return("Not a number")
+     Sum = sum(list_of_multiplications)
+     return (Sum)
 
 
 def test_challenge_06_happy_case(): 
@@ -37,6 +40,9 @@ def test_challenge_06_happy_case():
 
 def test_challenge_06_happy_case_2(): 
      assert sum_of_squares([7,1,50]) == 2550
+
+def test_challenge_06_happy_float_case(): 
+     assert sum_of_squares([1.0,2,3,4]) == 30
 
 def test_challenge_06_happy_case_3(): 
      assert sum_of_squares(["a", "b", "c", "d"]) == "Not a number"
