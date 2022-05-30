@@ -3,22 +3,22 @@
 # sum of the square of all the numbers in the array.
 
 
-#Theresa's Solution 
+#Solution 1:
 
 # def sum_of_squares(array_of_numbers):
 #     if not isinstance(array_of_numbers, list):
 #         return "Not a list"
 
-#     sum = 0 # variable to store the sum later, initializing it with 0
+#     sum = 0 # variable to store the sum later, initialized with 0; needs to be initialized because we have the sum on the right side of = in line 15
 #     for i in array_of_numbers:
 #         if isinstance(i, int):
-#             sum = (i * i) + sum
-#             #(1+1)+0 --> sum = 1 --> (2*2)+1 --> sum =5
+#             sum = (i * i) + sum  # goes through array elements in a loop: (1+1)+0 --> sum = 1 --> (2*2)+1 --> sum = 5
 #         if not isinstance(i, int):
 #             return("No integer")
 #     return (sum)
 
-#Solution with List
+#Solution 2: wirth sum()-function
+
 def sum_of_squares(array_of_numbers):
     
      if not isinstance(array_of_numbers, list): # there are no arrays in phyton; lists are used instead
