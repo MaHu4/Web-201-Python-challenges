@@ -7,7 +7,12 @@
 # --> for each 10€ = 1% discount starting from 50€
 
 def calculate_bill(shopping_list):
-    pass
+    sum = 0    
+    for i in shopping_list:
+    #    if isinstance(i, float) or isinstance(i, int): 
+           sum = sum + shopping_list[i]
+    print(sum)
+    return(sum)
 
 def test_challenge_07_happy_case(): 
     shopping_list = {'apples':11.20, 'bananas':2.2, 'eggs':30.00}
