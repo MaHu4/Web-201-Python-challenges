@@ -5,23 +5,24 @@
 
 #Solution 1:
 
-def sum_of_squares(array_of_numbers):
-    if not isinstance(array_of_numbers, list):
-        return "Not a list"
+# def sum_of_squares(array_of_numbers):
+#     if not isinstance(array_of_numbers, list):
+#         return "Not a list"
 
-    sum = 0 # variable to store the sum later, initialized with 0; needs to be initialized because we have the sum on the right side of = in line 15
-    for i in array_of_numbers:
-        if isinstance(i, int):
-            sum = (i * i) + sum  # goes through array elements in a loop: (1+1)+0 --> sum = 1 --> (2*2)+1 --> sum = 5
-        if not isinstance(i, int):
-            return("No integer")
-    return (sum)
+#     sum = 0 # variable to store the sum later, initialized with 0; needs to be initialized because we have the sum on the right side of = in line 15
+#     for i in array_of_numbers:
+#         if isinstance(i, int) or isinstance(i, float):
+#             sum = (i * i) + sum  # goes through array elements in a loop: (1+1)+0 --> sum = 1 --> (2*2)+1 --> sum = 5
+#         else:
+#             return("Not a number")
+     
+#     return (sum)
 
-#Solution 2: wirth sum()-function
+#Solution 2: with sum()-function
 
 def sum_of_squares(array_of_numbers):
     
-     if not isinstance(array_of_numbers, list): # there are no arrays in phyton; lists are used instead
+     if not isinstance(array_of_numbers, list): 
         return "Not a list"
     
      list_of_multiplications = [] #sum-function in line 34 needs a list; here we create a variable with an empty list; important to be outside the for-loop
@@ -42,13 +43,19 @@ def test_challenge_06_happy_case_2():
      assert sum_of_squares([7,1,50]) == 2550
 
 def test_challenge_06_happy_float_case(): 
-     assert sum_of_squares([1.0,2,3,4]) == 30
+     assert sum_of_squares([1.0,2,3,4]) == 30.0
 
-def test_challenge_06_happy_case_3(): 
+def test_challenge_06_sad_string_case(): 
      assert sum_of_squares(["a", "b", "c", "d"]) == "Not a number"
 
-def test_challenge_06_happy_case_4(): 
+def test_challenge_06_sad_strimng_case_2(): 
      assert sum_of_squares(["aloha"]) == "Not a number"
 
-def test_challenge_06_sad_case(): 
-     assert sum_of_squares("") == "Not a list"    
+def test_challenge_06_sad_not_a_list_case(): 
+     assert sum_of_squares("") == "Not a list" 
+
+def test_challenge_06_sad_mot_a_list_case_2 (): 
+     assert sum_of_squares(("y", 8, "aloha")) == "Not a list"   # Tuple
+
+def test_challenge_06_sad_mot_a_list_case_3 (): 
+     assert sum_of_squares({"y", 8, "aloha"}) == "Not a list"   # Dictionary
